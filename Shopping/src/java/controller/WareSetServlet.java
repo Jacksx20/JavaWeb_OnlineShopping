@@ -13,7 +13,7 @@ import model.*;
 
 /**
  *
- * @author jq303
+ * @author Jack20
  */
 @WebServlet(name = "WareSetServlet", urlPatterns = {"/wareSet"})
 public class WareSetServlet extends HttpServlet {
