@@ -10,7 +10,7 @@ import model.Ware;
 
 /**
  *
- * @author zhh
+ * @author Jack20
  */
 @WebServlet(name = "WareDetailsServlet", urlPatterns = {"/wareDetails"})
 public class WareDetailsServlet extends HttpServlet {
