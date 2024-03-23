@@ -25,3 +25,16 @@
   This mall mainly utilizes JavaServlet technology for development, which has strong logic, scalability, and is easy to maintain. The interface design of the mall mainly utilizes CSS to beautify the storefront. Secondly, the design of this mall also utilizes JSP technology, JDBC technology, and JavaBean technology.
 
   On the basis of the basic implementation of front-end business, the main development includes: registration, login, payment and order placement (outbound shipping), order management, product management, customer management, and other back-end businesses.
+1、 Registration
+2、 Login
+3、 Pay to place an order
+
+(1、If the customer is not logged in, please log in; (Successfully logged in and generated customer object coexisting in Session)
+(2. No specific payment function is required, just highlight the total amount;
+(3. Shipping information: recipient, contact phone number, shipping address;
+(4. Generate an order, including: order number, customer, order date, total amount, recipient, contact phone number, and delivery address;
+(5. Add detailed records, including: order, purchased goods, quantity, unit price, and reduce the inventory of goods accordingly.
+
+## 4、 Order Management
+Order inquiry and deletion
+
