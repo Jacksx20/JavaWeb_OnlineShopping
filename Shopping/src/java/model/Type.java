@@ -7,8 +7,7 @@ package model;
 
 /**
  *
- * @author Jacksx20
- * 
+ * @author zhh
  */
 public class Type {
     private int code;
