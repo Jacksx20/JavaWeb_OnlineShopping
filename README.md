@@ -20,3 +20,8 @@ On the basis of comprehensive programming experiments on the client side, combin
 4. Order Management Module and Order Details Module: Display detailed information of saved orders;
 5. Shopping cart module: Add/delete products, checkout, display order information.
 6. Implement a series of operations by logging in as an administrator to the backend.
+
+## 三、Brief Introduction
+This mall mainly utilizes JavaServlet technology for development, which has strong logic, scalability, and is easy to maintain. The interface design of the mall mainly utilizes CSS to beautify the storefront. Secondly, the design of this mall also utilizes JSP technology, JDBC technology, and JavaBean technology.
+
+On the basis of the basic implementation of front-end business, the main development includes: registration, login, payment and order placement (outbound shipping), order management, product management, customer management, and other back-end businesses.
