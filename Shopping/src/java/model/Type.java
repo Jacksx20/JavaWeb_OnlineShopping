@@ -8,13 +8,13 @@ package model;
 /**
  *
  * @author Jacksx20
- * 
  */
 public class Type {
     private int code;
     private String title;
-    
-    public Type() {}
+
+    public Type() {
+    }
 
     public Type(int code, String title) {
         this.code = code;
