@@ -34,3 +34,7 @@
 (3. Shipping information: recipient, contact phone number, shipping address;
 (4. Generate an order, including: order number, customer, order date, total amount, recipient, contact phone number, and delivery address;
 (5. Add detailed records, including: order, purchased goods, quantity, unit price, and reduce the inventory of goods accordingly.
+
+## 4、 Order Management
+Order inquiry and deletion
+
