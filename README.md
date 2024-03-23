@@ -13,3 +13,10 @@ Write Java code, be familiar with and master the use of JDBC, including the prin
 ## 二、Requirement Analysis
 
 On the basis of comprehensive programming experiments on the client side, combined with technologies such as JSP&JDBC, the main modules of the mall backend management system (login, product, product information, etc.) are completed to achieve dynamic data display and backend operation functions of corresponding information. This mainly includes related database design and user login functions, product list dynamic database table content list display function, shopping cart addition and backend interaction function with the database, and can be debugged using development tools for server-side code.
+
+1. Design a comprehensive online store;
+2. Account module: Provides user registration and login, considering the increase or decrease in the number of users, requiring the use of database technology;
+3. Product display module: In order to increase sales volume, it is necessary to have a simple advertising function and provide detailed product parameters; To promote products, the website needs to display hot selling products, classify and search for products
+4. Order Management Module and Order Details Module: Display detailed information of saved orders;
+5. Shopping cart module: Add/delete products, checkout, display order information.
+6. Implement a series of operations by logging in as an administrator to the backend.
