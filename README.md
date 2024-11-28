@@ -1,3 +1,6 @@
+[![cn](https://img.shields.io/badge/Lang-Chinese-blue?color=%23FF0000)](https://github.com/Jacksx20/JavaWeb_OnlineShopping/blob/main/README_zh-cn.md)
+[![en](https://img.shields.io/badge/Lang-English-blue.svg)](https://github.com/Jacksx20/JavaWeb_OnlineShopping/blob/main/README.md)
+
 # JavaWeb-Online Mall
 
 ## 一、objective
