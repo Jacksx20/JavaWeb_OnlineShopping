@@ -1,15 +1,15 @@
 
 package model;
 
-import java.io.Serializable;
-
-
 public class Order {
     private long code;
     private String owner, date, consignee, phone, address;
     private double total;
-    public Order(){}
-    public Order(long code, String owner, String date, String consignee, String phone, String address, double total){
+
+    public Order() {
+    }
+
+    public Order(long code, String owner, String date, String consignee, String phone, String address, double total) {
         this.code = code;
         this.owner = owner;
         this.address = address;
@@ -74,5 +74,5 @@ public class Order {
     public void setTotal(double total) {
         this.total = total;
     }
-    
+
 }
