@@ -50,6 +50,9 @@ public class LoginServlet extends HttpServlet {
                 }
             }
         } catch (SQLException se) {
+        se.printStackTrace();
+        request.setAttribute("err", "系统繁忙，请稍后再试");
+        request.getRequestDispatcher("/error.jsp").forward(request, response);
         }
     }
 
