@@ -37,7 +37,8 @@ public class OrderingServlet extends HttpServlet {
         Client usr = (Client) session.getAttribute("client");
         Cart cart = (Cart) session.getAttribute("cart");
         long oid;
-        try (Connection cn = DBUtils.connect();) {
+        try (Connection cn = DBUtils.connect()) {
+            cn.setAutoCommit(false);
             try (PreparedStatement ps = cn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
                 ps.setString(1, usr.getCode());
                 ps.setDouble(2, cart.getTotal());
@@ -64,7 +65,10 @@ public class OrderingServlet extends HttpServlet {
             request.getSession(true);
             response.sendRedirect("thanks.jsp");
         } catch (SQLException se) {
+            cn.rollback();
+            throw se;
         }
+        cn.commit();
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the
