@@ -18,6 +18,11 @@ public class StockingServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        Client client = (Client) request.getSession().getAttribute("client");
+        if (client == null || !client.isManager()) {
+            response.sendError(HttpServletResponse.SC_FORBIDDEN, "需要管理员权限");
+            return;
+        }
         response.setContentType("text/plain; charset=utf-8");//确认数据类型与编码方式
         request.setCharacterEncoding("utf-8");
         String title=request.getParameter("title"), sql, code=request.getParameter("code");//分别提取表单的值
