@@ -37,13 +37,15 @@ public class ExistedWareServlet extends HttpServlet {
             ps.setInt(1, Integer.parseInt(tp));
             ps.setString(2, cd);
             try (ResultSet rs=ps.executeQuery()) {
+                // 需要添加org.json依赖
+                JSONObject json = new JSONObject();
                 if(rs.next()) {
-                    put=String.format("({title:\"%s\", model:\"%s\", depict:\"%s\", price:%f})", 
-                            rs.getString("title").trim(),
-                            rs.getString("model").trim(),
-                            rs.getString("depict").trim(),
-                            rs.getDouble("price"));
+                    json.put("title", rs.getString("title").trim());
+                    json.put("model", rs.getString("model").trim());
+                    json.put("depict", rs.getString("depict").trim());
+                    json.put("price", rs.getDouble("price"));
                 }
+                out.print(json.toString());
             }
         }catch(SQLException se) {
             se.printStackTrace();
