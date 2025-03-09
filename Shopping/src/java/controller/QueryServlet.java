@@ -18,8 +18,9 @@ public class QueryServlet extends HttpServlet {
         String fm="<tr><th><input type='checkbox'></th><td><img src='images/%s.jpg' width='60'></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%.2f</td><td>%d</td></tr>",//网页的一部分
                tb="";
         try(    Connection cn=DBUtils.connect();//建立联系
-                PreparedStatement ps=cn.prepareStatement("select * from wares where type="+request.getParameter("type"));//预处理SQL语句
-                ResultSet rs=ps.executeQuery()) {//上传SQL语句进行查询
+                PreparedStatement ps=cn.prepareStatement("select * from wares where type=?")) {
+                ps.setInt(1, Integer.parseInt(request.getParameter("type")));
+                 ResultSet rs=ps.executeQuery()) {//上传SQL语句进行查询
             while(rs.next()) {
                 tb+=String.format(fm, rs.getString("photo"),//构建tb
                         rs.getString("code"),
