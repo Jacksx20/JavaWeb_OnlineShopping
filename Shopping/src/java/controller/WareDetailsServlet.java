@@ -25,11 +25,13 @@ public class WareDetailsServlet extends HttpServlet {
 
         Object waresObj = session.getAttribute("wares");
         HashMap<String, Ware> wares = null;
-        if (waresObj instanceof HashMap<?, ?>) {
+        if (waresObj instanceof HashMap) {
             wares = (HashMap<String, Ware>) waresObj;
+            Ware ware = wares.get(wareId);
+            if (ware != null) {
+                session.setAttribute("ware", ware);
+            }
         }
-        Ware ware = wares.get(wareId);
-        session.setAttribute("ware", ware);// 附加值
         request.getRequestDispatcher("wareDetails.jsp").forward(request, response);// 给这个网页传递数据
     }
 
